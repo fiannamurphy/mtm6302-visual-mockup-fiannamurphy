@@ -1,676 +1,630 @@
- box {
+/* NASA APOD Search - Capstone Project Part 4 */
+
+
+
+* {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  background-color: #ffffff;
-  color: #222222;
+
+  background-color: #0b1020;
+  color: #f5f5f5;
+
   font-family: "DM Sans", Arial, sans-serif;
 }
 
 h1,
 h2,
-h3 {
-  color: #222222;
-  font-family: "Roca One", Georgia, serif;
+h3,
+p {
+  margin-top: 0;
+}
+
+img {
+  max-width: 100%;
 }
 
 
-/* Header Section */
+/* -- Header -- */
 
 .site-header {
   width: 88%;
   max-width: 1200px;
 
   margin: 0 auto;
-  padding: 25px 0 18px;
+  padding: 24px 0;
 
   display: flex;
   align-items: center;
 
-  border-bottom: 2px solid #222222;
+  border-bottom: 1px solid #596579;
 }
+
+
+/* Logo */
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+}
+
+.logo-icon {
+  color: #8fa8ff;
+  font-size: 2rem;
 }
 
 .logo h1 {
   margin: 0;
-  font-size: 1.8rem;
-}
 
-.star {
-  display: inline-block;
-}
+  color: #ffffff;
 
-.logo-star {
-  color: #D6D3B1;
-  font-size: 2.2rem;
-}
-
-.blue-star {
-  color: #6B7280;
-  font-size: 2.4rem;
-}
-
-.small-star {
-  color: #6B7280;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 
 
-/* Navigation Section*/
+/* -- Navigation -- */
 
 .desktop-nav {
+  margin-left: auto;
+
   display: flex;
   gap: 35px;
-
-  margin-left: 45px;
 }
 
 .desktop-nav a {
-  color: #222222;
+  color: #f5f5f5;
+
   text-decoration: none;
-  font-size: 1.05rem;
+
+  font-size: 1rem;
 }
 
 .desktop-nav a:hover {
-  text-decoration: underline;
+  color: #8fa8ff;
 }
 
 
-/* Search Section*/
-
-.search {
-  width: 180px;
-  height: 34px;
-
-  margin-left: auto;
-  padding: 0 14px;
-
-  display: flex;
-  align-items: center;
-
-  border: 1px solid #6B7280;
-  border-radius: 20px;
-
-  color: #6B7280;
-  font-size: 0.9rem;
-}
-
-
-/* =========================
-   MOBILE MENU BUTTON
-========================= */
-
-.menu-button {
-  display: none;
-}
-
-
-/* Hero Section */
+/* -- Hero Section -- */
 
 .hero {
-  max-width: 850px;
+  width: 88%;
+  max-width: 900px;
 
   margin: 0 auto;
-  padding: 45px 20px 45px;
+
+  padding: 70px 20px 60px;
 
   text-align: center;
 }
 
-.hero-title {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 12px;
+.hero-star {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #8fa8ff;
+
+  font-size: 2.5rem;
 }
 
 .hero h2 {
-  margin: 0;
+  margin-bottom: 25px;
 
-  font-size: 4.8rem;
+  color: #ffffff;
+
+  font-size: 4.5rem;
   line-height: 1.05;
 }
 
 .hero p {
   max-width: 700px;
 
-  margin: 30px auto 0;
+  margin: 0 auto;
 
-  font-size: 1.5rem;
-  line-height: 1.4;
+  color: #cbd2df;
+
+  font-size: 1.35rem;
+  line-height: 1.6;
+}
+
+/* -- Main Content -- */
+
+main {
+  padding-bottom: 60px;
 }
 
 
-/* Get Started Button */
+/* -- Search Section -- */
+.search-section {
+  width: 88%;
+  max-width: 900px;
 
-.get-started {
-  display: none;
+  margin: 0 auto 50px;
 
-  color: #222222;
-  text-decoration: none;
+  padding: 35px;
+
+  background-color: #171e30;
+
+  border: 1px solid #364157;
+  border-radius: 12px;
+
+  text-align: center;
 }
 
+.search-section h2 {
+  margin-bottom: 25px;
 
-/* Event Cards */
-.event-cards {
-  width: 82%;
-  max-width: 1100px;
+  color: #ffffff;
 
-  margin: 40px auto 70px;
-
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 55px;
+  font-size: 2rem;
 }
 
-.event-card {
-  min-height: 290px;
-
-  padding: 35px 25px;
-
+#search-form {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  text-align: center;
+  gap: 15px;
 
-  border: 2px solid #222222;
-  border-radius: 6px;
+  flex-wrap: wrap;
 }
 
-.event-card h3 {
-  margin: 0 0 35px;
-
-  font-family: "DM Sans", Arial, sans-serif;
-  font-size: 1.6rem;
+#search-form label {
+  font-size: 1rem;
   font-weight: 500;
 }
 
-.event-card p {
-  margin: 0;
+#date {
+  padding: 12px 15px;
 
-  max-width: 230px;
+  background-color: #ffffff;
+  color: #222222;
 
-  font-size: 1.05rem;
-  line-height: 1.5;
+  border: none;
+  border-radius: 6px;
+
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 1rem;
+}
+
+#search-form button {
+  padding: 12px 24px;
+
+  background-color: #8fa8ff;
+  color: #0b1020;
+
+  border: none;
+  border-radius: 6px;
+
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+#search-form button:hover {
+  background-color: #b2c2ff;
+}
+
+#search-message {
+  margin-top: 20px;
+  margin-bottom: 0;
+
+  color: #cbd2df;
 }
 
 
-/* Card Colours */
+/* -- Nasa Result Section -- */
 
-.wedding-card {
-  background-color: #6B7280;
+.result-section {
+  width: 88%;
+  max-width: 1000px;
+
+  margin: 0 auto 50px;
+
+  padding: 40px;
+
+  background-color: #171e30;
+
+  border: 1px solid #364157;
+  border-radius: 12px;
 }
 
-.business-card {
-  background-color: #D6D3B1;
+.result-section h2 {
+  margin-bottom: 10px;
+
+  color: #ffffff;
+
+  font-size: 2.2rem;
+
+  text-align: center;
 }
 
-.party-card {
-  background-color: #F5F5F5;
-}
+#apod-date {
+  margin-bottom: 25px;
 
+  color: #8fa8ff;
 
-/* Information Section */
-
-.information {
-  width: 82%;
-  max-width: 1050px;
-
-  margin: 0 auto 65px;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-}
-
-.information h2 {
-  margin: 0 0 22px;
-
-  font-size: 2.4rem;
-}
-
-.information ul {
-  margin: 0;
-
-  padding-left: 28px;
-
-  font-size: 1.45rem;
-  line-height: 1.5;
+  text-align: center;
 }
 
 
-/* About Section */
+/* -- Nasa Image -- */
 
-.about {
-  width: 82%;
-  max-width: 1050px;
+#media-container {
+  width: 100%;
 
-  margin: 0 auto 65px;
+  margin: 25px auto;
 
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  grid-template-areas:
-    "heading image"
-    "text image";
-
-  column-gap: 50px;
-  row-gap: 15px;
-
-  align-items: center;
+  text-align: center;
 }
 
-.about-heading {
-  grid-area: heading;
-}
-
-.about-heading h2 {
-  margin: 0;
-
-  font-size: 3rem;
-  line-height: 1.2;
-}
-
-.about-text {
-  grid-area: text;
-}
-
-.about-text p {
-  margin: 0;
-
-  max-width: 420px;
-
-  font-size: 1.8rem;
-  line-height: 1.35;
-}
-
-.about-image {
-  grid-area: image;
-}
-
-.about-image img {
+#media-container img {
   display: block;
 
   width: 100%;
-  max-width: 480px;
+  max-width: 850px;
 
-  object-fit: cover;
+  margin: 0 auto;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+.image-placeholder {
+  min-height: 350px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #222b40;
+
+  border: 1px dashed #70809d;
+  border-radius: 8px;
+
+  color: #aeb8c8;
+
+  font-size: 1.3rem;
 }
 
 
-/* Footer */
+/* Explanation */
 
-footer {
-  width: 100%;
-  min-height: 110px;
+#apod-explanation {
+  max-width: 850px;
 
-  margin-top: 50px;
+  margin: 25px auto 0;
 
-  background-color: #6B7280;
+  color: #d9deE8;
 
-  border-top: 2px solid #222222;
+  font-size: 1.05rem;
+  line-height: 1.7;
 }
 
-footer p {
+
+/* Favourite Button */
+
+#favourite-button {
+  display: block;
+
+  margin: 30px auto 0;
+  padding: 12px 24px;
+
+  background-color: #d6d3b1;
+  color: #222222;
+
+  border: none;
+  border-radius: 6px;
+
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+#favourite-button:hover {
+  background-color: #eeeac6;
+}
+
+#favourite-button[hidden] {
   display: none;
 }
 
 
-/* Tablet */
+/* -- Favourites Section -- */
+
+.favourites-section {
+  width: 88%;
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  padding: 40px;
+
+  background-color: #f5f5f5;
+  color: #222222;
+
+  border-radius: 12px;
+}
+
+.favourites-section h2 {
+  margin-bottom: 10px;
+
+  font-size: 2.2rem;
+}
+
+.favourites-section > p {
+  margin-bottom: 30px;
+
+  color: #555555;
+}
+
+
+/* Favourites Container */
+
+#favourites-list {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+
+/* Individual Favourite */
+
+.favourite-item {
+  padding: 18px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #d6d6d6;
+  border-radius: 8px;
+}
+
+.favourite-item img {
+  width: 100%;
+  height: 180px;
+
+  object-fit: cover;
+
+  border-radius: 6px;
+}
+
+.favourite-item h3 {
+  margin: 15px 0 5px;
+
+  font-size: 1.1rem;
+}
+
+.favourite-item p {
+  margin-bottom: 15px;
+
+  color: #666666;
+
+  font-size: 0.9rem;
+}
+
+.favourite-item button {
+  padding: 8px 14px;
+
+  background-color: #6b7280;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.favourite-item button:hover {
+  background-color: #4e5562;
+}
+
+
+/* No favourites message */
+
+#no-favourites {
+  grid-column: 1 / -1;
+
+  margin: 0;
+
+  color: #666666;
+}
+
+
+/* -- Footer -- */
+
+footer {
+  margin-top: 60px;
+  padding: 30px 20px;
+
+  background-color: #171e30;
+
+  text-align: center;
+
+  border-top: 1px solid #364157;
+}
+
+footer p {
+  margin: 0;
+
+  color: #aeb8c8;
+
+  font-size: 0.9rem;
+}
+
+
+/* -- Tablet -- */
 
 @media screen and (max-width: 900px) {
 
-  /* Header */
-
   .site-header {
     width: 86%;
-
-    flex-wrap: wrap;
-
-    padding-top: 25px;
   }
-
-  .logo {
-    width: 50%;
-  }
-
-  .logo h1 {
-    font-size: 1.8rem;
-  }
-
-  .search {
-    width: 190px;
-
-    margin-left: auto;
-  }
-
-  .desktop-nav {
-    width: 100%;
-
-    margin: 20px 0 0;
-
-    gap: 35px;
-  }
-
-
-  /* Hero */
 
   .hero {
-    padding: 40px 20px;
+    width: 90%;
+
+    padding: 55px 20px 45px;
   }
 
   .hero h2 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   .hero p {
-    max-width: 600px;
-
-    margin-top: 25px;
-
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
-
-  /* Event Cards */
-
-  .event-cards {
-    width: 82%;
-
-    margin: 30px auto 50px;
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 18px;
+  .search-section,
+  .result-section,
+  .favourites-section {
+    width: 86%;
   }
 
-  .event-card {
-    width: 100%;
-    min-height: 130px;
-
-    padding: 20px 30px;
-  }
-
-  .event-card h3 {
-    margin-bottom: 20px;
-
-    font-size: 1.45rem;
-  }
-
-  .event-card p {
-    max-width: 500px;
-
-    font-size: 1rem;
-  }
-
-
-  /* Information */
-
-  .information {
-    width: 84%;
-
-    gap: 45px;
-
-    margin-bottom: 55px;
-  }
-
-  .information h2 {
-    font-size: 2.1rem;
-  }
-
-  .information ul {
-    font-size: 1.3rem;
-  }
-
-
-  /* About */
-
-  .about {
-    width: 84%;
-
-    grid-template-columns: 1fr 1fr;
-
-    grid-template-areas:
-      "heading text"
-      "image image";
-
-    gap: 30px 45px;
-  }
-
-  .about-heading h2 {
-    font-size: 2.7rem;
-  }
-
-  .about-text p {
-    font-size: 1.65rem;
-  }
-
-  .about-image {
-    text-align: center;
-  }
-
-  .about-image img {
-    width: 58%;
-
-    margin: 0 auto;
-  }
-
-
-  /* Footer */
-
-  footer {
-    min-height: 95px;
+  #favourites-list {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 
-/* ==================================
-   MOBILE
-   600px AND BELOW
-================================== */
+/* -- Mobile -- */
 
 @media screen and (max-width: 600px) {
 
   /* Header */
 
   .site-header {
-    width: 86%;
+    width: 88%;
 
-    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: flex-start;
 
-    padding: 18px 0 14px;
-  }
-
-  .logo {
-    width: auto;
+    gap: 18px;
   }
 
   .logo h1 {
-    font-size: 1.45rem;
+    font-size: 1.4rem;
   }
 
-  .logo-star {
-    font-size: 1.8rem;
+  .logo-icon {
+    font-size: 1.7rem;
   }
 
-  .desktop-nav,
-  .search {
-    display: none;
+  .desktop-nav {
+    width: 100%;
+
+    margin-left: 0;
+
+    justify-content: space-between;
+
+    gap: 10px;
   }
 
-  .menu-button {
-    display: block;
-
-    margin-left: auto;
-    padding: 0;
-
-    background: none;
-    border: none;
-
-    color: #222222;
-
-    font-size: 2rem;
-
-    cursor: pointer;
+  .desktop-nav a {
+    font-size: 0.9rem;
   }
 
 
   /* Hero */
 
   .hero {
-    padding: 30px 15px 30px;
+    padding: 40px 15px 35px;
   }
 
-  .hero-title {
-    gap: 7px;
-  }
-
-  .blue-star {
-    font-size: 1.5rem;
-  }
-
-  .hero h2 {
-    font-size: 3rem;
-  }
-
-  .hero p {
-    max-width: 330px;
-
-    margin-top: 18px;
-
-    font-size: 1.1rem;
-  }
-
-
-  /* Get Started Button */
-
-  .get-started {
-    display: inline-block;
-
-    margin-top: 15px;
-    padding: 10px 24px;
-
-    color: #222222;
-    text-decoration: none;
-
-    background-color: #ffffff;
-
-    border: 2px solid #222222;
-    border-radius: 8px;
-
-    font-size: 1rem;
-  }
-
-  .get-started:hover {
-    background-color: #F5F5F5;
-  }
-
-
-  /* Event Cards */
-
-  .event-cards {
-    width: 76%;
-
-    margin: 20px auto 35px;
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 14px;
-  }
-
-  .event-card {
-    width: 100%;
-    min-height: 165px;
-
-    padding: 22px 20px;
-  }
-
-  .event-card h3 {
-    margin-bottom: 25px;
-
-    font-size: 1.3rem;
-  }
-
-  .event-card p {
-    max-width: 240px;
-
-    font-size: 0.95rem;
-  }
-
-
-  /* Information */
-
-  .information {
-    width: 86%;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 18px;
-
-    margin-bottom: 40px;
-  }
-
-  .information h2 {
-    margin-bottom: 15px;
-
-    font-size: 1.55rem;
-  }
-
-  .information ul {
-    padding-left: 20px;
-
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-
-
-  /* About */
-
-  .about {
-    width: 86%;
-
-    grid-template-columns: 1fr 1.15fr;
-
-    grid-template-areas:
-      "heading image"
-      "text image";
-
-    gap: 15px 20px;
-
-    margin-bottom: 30px;
-  }
-
-  .about-heading h2 {
+  .hero-star {
     font-size: 2rem;
   }
 
-  .about-text p {
-    font-size: 1.15rem;
+  .hero h2 {
+    font-size: 2.6rem;
   }
 
-  .about-image img {
+  .hero p {
+    font-size: 1.05rem;
+  }
+
+
+  /* Search */
+
+  .search-section {
+    width: 90%;
+
+    padding: 25px 20px;
+  }
+
+  #search-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #search-form label {
+    text-align: left;
+  }
+
+  #date,
+  #search-form button {
     width: 100%;
+  }
+
+
+  /* Result */
+
+  .result-section {
+    width: 90%;
+
+    padding: 25px 20px;
+  }
+
+  .result-section h2 {
+    font-size: 1.7rem;
+  }
+
+  .image-placeholder {
+    min-height: 220px;
+  }
+
+  #apod-explanation {
+    font-size: 1rem;
+  }
+
+  #favourite-button {
+    width: 100%;
+  }
+
+
+  /* Favourites */
+
+  .favourites-section {
+    width: 90%;
+
+    padding: 25px 20px;
+  }
+
+  .favourites-section h2 {
+    font-size: 1.8rem;
+  }
+
+  #favourites-list {
+    grid-template-columns: 1fr;
   }
 
 
   /* Footer */
 
   footer {
-    min-height: 90px;
-
-    margin-top: 25px;
-
-    background-color: #6B7280;
+    padding: 25px 15px;
   }
 }
