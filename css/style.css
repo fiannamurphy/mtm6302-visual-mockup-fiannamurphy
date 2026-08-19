@@ -1,0 +1,676 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #ffffff;
+  color: #222222;
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  color: #222222;
+  font-family: "Roca One", Georgia, serif;
+}
+
+
+/* Header Section */
+
+.site-header {
+  width: 88%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+  padding: 25px 0 18px;
+
+  display: flex;
+  align-items: center;
+
+  border-bottom: 2px solid #222222;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.star {
+  display: inline-block;
+}
+
+.logo-star {
+  color: #D6D3B1;
+  font-size: 2.2rem;
+}
+
+.blue-star {
+  color: #6B7280;
+  font-size: 2.4rem;
+}
+
+.small-star {
+  color: #6B7280;
+  font-size: 1.5rem;
+}
+
+
+/* Navigation Section*/
+
+.desktop-nav {
+  display: flex;
+  gap: 35px;
+
+  margin-left: 45px;
+}
+
+.desktop-nav a {
+  color: #222222;
+  text-decoration: none;
+  font-size: 1.05rem;
+}
+
+.desktop-nav a:hover {
+  text-decoration: underline;
+}
+
+
+/* Search Section*/
+
+.search {
+  width: 180px;
+  height: 34px;
+
+  margin-left: auto;
+  padding: 0 14px;
+
+  display: flex;
+  align-items: center;
+
+  border: 1px solid #6B7280;
+  border-radius: 20px;
+
+  color: #6B7280;
+  font-size: 0.9rem;
+}
+
+
+/* =========================
+   MOBILE MENU BUTTON
+========================= */
+
+.menu-button {
+  display: none;
+}
+
+
+/* Hero Section */
+
+.hero {
+  max-width: 850px;
+
+  margin: 0 auto;
+  padding: 45px 20px 45px;
+
+  text-align: center;
+}
+
+.hero-title {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.hero h2 {
+  margin: 0;
+
+  font-size: 4.8rem;
+  line-height: 1.05;
+}
+
+.hero p {
+  max-width: 700px;
+
+  margin: 30px auto 0;
+
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+
+/* Get Started Button */
+
+.get-started {
+  display: none;
+
+  color: #222222;
+  text-decoration: none;
+}
+
+
+/* Event Cards */
+.event-cards {
+  width: 82%;
+  max-width: 1100px;
+
+  margin: 40px auto 70px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 55px;
+}
+
+.event-card {
+  min-height: 290px;
+
+  padding: 35px 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  border: 2px solid #222222;
+  border-radius: 6px;
+}
+
+.event-card h3 {
+  margin: 0 0 35px;
+
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.event-card p {
+  margin: 0;
+
+  max-width: 230px;
+
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+
+/* Card Colours */
+
+.wedding-card {
+  background-color: #6B7280;
+}
+
+.business-card {
+  background-color: #D6D3B1;
+}
+
+.party-card {
+  background-color: #F5F5F5;
+}
+
+
+/* Information Section */
+
+.information {
+  width: 82%;
+  max-width: 1050px;
+
+  margin: 0 auto 65px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+.information h2 {
+  margin: 0 0 22px;
+
+  font-size: 2.4rem;
+}
+
+.information ul {
+  margin: 0;
+
+  padding-left: 28px;
+
+  font-size: 1.45rem;
+  line-height: 1.5;
+}
+
+
+/* About Section */
+
+.about {
+  width: 82%;
+  max-width: 1050px;
+
+  margin: 0 auto 65px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  grid-template-areas:
+    "heading image"
+    "text image";
+
+  column-gap: 50px;
+  row-gap: 15px;
+
+  align-items: center;
+}
+
+.about-heading {
+  grid-area: heading;
+}
+
+.about-heading h2 {
+  margin: 0;
+
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.about-text {
+  grid-area: text;
+}
+
+.about-text p {
+  margin: 0;
+
+  max-width: 420px;
+
+  font-size: 1.8rem;
+  line-height: 1.35;
+}
+
+.about-image {
+  grid-area: image;
+}
+
+.about-image img {
+  display: block;
+
+  width: 100%;
+  max-width: 480px;
+
+  object-fit: cover;
+}
+
+
+/* Footer */
+
+footer {
+  width: 100%;
+  min-height: 110px;
+
+  margin-top: 50px;
+
+  background-color: #6B7280;
+
+  border-top: 2px solid #222222;
+}
+
+footer p {
+  display: none;
+}
+
+
+/* Tablet */
+
+@media screen and (max-width: 900px) {
+
+  /* Header */
+
+  .site-header {
+    width: 86%;
+
+    flex-wrap: wrap;
+
+    padding-top: 25px;
+  }
+
+  .logo {
+    width: 50%;
+  }
+
+  .logo h1 {
+    font-size: 1.8rem;
+  }
+
+  .search {
+    width: 190px;
+
+    margin-left: auto;
+  }
+
+  .desktop-nav {
+    width: 100%;
+
+    margin: 20px 0 0;
+
+    gap: 35px;
+  }
+
+
+  /* Hero */
+
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .hero h2 {
+    font-size: 4rem;
+  }
+
+  .hero p {
+    max-width: 600px;
+
+    margin-top: 25px;
+
+    font-size: 1.4rem;
+  }
+
+
+  /* Event Cards */
+
+  .event-cards {
+    width: 82%;
+
+    margin: 30px auto 50px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+  }
+
+  .event-card {
+    width: 100%;
+    min-height: 130px;
+
+    padding: 20px 30px;
+  }
+
+  .event-card h3 {
+    margin-bottom: 20px;
+
+    font-size: 1.45rem;
+  }
+
+  .event-card p {
+    max-width: 500px;
+
+    font-size: 1rem;
+  }
+
+
+  /* Information */
+
+  .information {
+    width: 84%;
+
+    gap: 45px;
+
+    margin-bottom: 55px;
+  }
+
+  .information h2 {
+    font-size: 2.1rem;
+  }
+
+  .information ul {
+    font-size: 1.3rem;
+  }
+
+
+  /* About */
+
+  .about {
+    width: 84%;
+
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-areas:
+      "heading text"
+      "image image";
+
+    gap: 30px 45px;
+  }
+
+  .about-heading h2 {
+    font-size: 2.7rem;
+  }
+
+  .about-text p {
+    font-size: 1.65rem;
+  }
+
+  .about-image {
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 58%;
+
+    margin: 0 auto;
+  }
+
+
+  /* Footer */
+
+  footer {
+    min-height: 95px;
+  }
+}
+
+
+/* ==================================
+   MOBILE
+   600px AND BELOW
+================================== */
+
+@media screen and (max-width: 600px) {
+
+  /* Header */
+
+  .site-header {
+    width: 86%;
+
+    flex-wrap: nowrap;
+
+    padding: 18px 0 14px;
+  }
+
+  .logo {
+    width: auto;
+  }
+
+  .logo h1 {
+    font-size: 1.45rem;
+  }
+
+  .logo-star {
+    font-size: 1.8rem;
+  }
+
+  .desktop-nav,
+  .search {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+
+    margin-left: auto;
+    padding: 0;
+
+    background: none;
+    border: none;
+
+    color: #222222;
+
+    font-size: 2rem;
+
+    cursor: pointer;
+  }
+
+
+  /* Hero */
+
+  .hero {
+    padding: 30px 15px 30px;
+  }
+
+  .hero-title {
+    gap: 7px;
+  }
+
+  .blue-star {
+    font-size: 1.5rem;
+  }
+
+  .hero h2 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    max-width: 330px;
+
+    margin-top: 18px;
+
+    font-size: 1.1rem;
+  }
+
+
+  /* Get Started Button */
+
+  .get-started {
+    display: inline-block;
+
+    margin-top: 15px;
+    padding: 10px 24px;
+
+    color: #222222;
+    text-decoration: none;
+
+    background-color: #ffffff;
+
+    border: 2px solid #222222;
+    border-radius: 8px;
+
+    font-size: 1rem;
+  }
+
+  .get-started:hover {
+    background-color: #F5F5F5;
+  }
+
+
+  /* Event Cards */
+
+  .event-cards {
+    width: 76%;
+
+    margin: 20px auto 35px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+  }
+
+  .event-card {
+    width: 100%;
+    min-height: 165px;
+
+    padding: 22px 20px;
+  }
+
+  .event-card h3 {
+    margin-bottom: 25px;
+
+    font-size: 1.3rem;
+  }
+
+  .event-card p {
+    max-width: 240px;
+
+    font-size: 0.95rem;
+  }
+
+
+  /* Information */
+
+  .information {
+    width: 86%;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+
+    margin-bottom: 40px;
+  }
+
+  .information h2 {
+    margin-bottom: 15px;
+
+    font-size: 1.55rem;
+  }
+
+  .information ul {
+    padding-left: 20px;
+
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+
+  /* About */
+
+  .about {
+    width: 86%;
+
+    grid-template-columns: 1fr 1.15fr;
+
+    grid-template-areas:
+      "heading image"
+      "text image";
+
+    gap: 15px 20px;
+
+    margin-bottom: 30px;
+  }
+
+  .about-heading h2 {
+    font-size: 2rem;
+  }
+
+  .about-text p {
+    font-size: 1.15rem;
+  }
+
+  .about-image img {
+    width: 100%;
+  }
+
+
+  /* Footer */
+
+  footer {
+    min-height: 90px;
+
+    margin-top: 25px;
+
+    background-color: #6B7280;
+  }
+}
